@@ -1,12 +1,27 @@
-# React + Vite
+A sleek React Pokédex that lets you browse, search, and view details for Pokémon using the public [PokéAPI]. Built with React + Vite, Tailwind CSS, Axios, and React Router. Includes a reusable debounce hook to avoid spamming the API while typing.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
 
-Currently, two official plugins are available:
+Paginated list of Pokémon (Prev / Next via PokéAPI next/previous URLs)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Search by name with a 2s debounced input (custom hook or use-debounce lib)
 
-## Expanding the ESLint configuration
+Details page with image, height, weight, and type badges (Fire/Water/etc.)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive grid using Tailwind (grid-cols-2 → lg:grid-cols-5)
+
+Consistent card sizing so the grid doesn’t jump between pages
+
+Error + loading states for a smooth UX
+
+🧱 Tech Stack
+
+React 18, Vite
+
+React Router for routing (/ list, /pokemon/:id details)
+
+Axios for API requests
+
+Tailwind CSS for styling
+
+Custom Hooks (usePokemonDetails, useDebounce)
